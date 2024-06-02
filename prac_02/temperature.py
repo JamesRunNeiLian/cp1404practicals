@@ -25,9 +25,11 @@ Q - Quit"""
     print("Thank you.")
 
 def convert_celsius_to_fahrenheit(celsius):
-    return celsius * 9.0 / 5 + 32
+    fahrenheit = celsius * 9.0 / 5 + 32
+    return fahrenheit
 
 def convert_fahrenheit_to_celsius(fahrenheit):
-    return 5 / 9 * (fahrenheit - 32)
+   celsius =5 / 9 * (fahrenheit - 32)
+   return celsius
 
 main()
