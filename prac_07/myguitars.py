@@ -37,4 +37,31 @@ def main():
     display_guitars(guitars)
 
 
+def load_guitars(filename):
+    """Load guitars from a CSV file and return a list of Guitar objects."""
+    guitars = []
+    with open(filename, 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row:  # Ensure the row is not empty
+                name, year, cost = row
+                guitars.append(Guitar(name, int(year), float(cost)))
+    return guitars
 
+
+def save_guitars(filename, guitars):
+    """Save the list of Guitar objects to a CSV file."""
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+        for guitar in guitars:
+            writer.writerow([guitar.name, guitar.year, guitar.cost])
+
+
+def display_guitars(guitars):
+    """Display all guitars."""
+    for guitar in guitars:
+        print(guitar)
+
+
+if __name__ == "__main__":
+    main()
