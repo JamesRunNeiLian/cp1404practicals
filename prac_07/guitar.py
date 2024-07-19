@@ -1,7 +1,5 @@
 """
 Module: guitar
-Author: [Your Name]
-Date: [Current Date]
 Description: This module defines the Guitar class, which represents a guitar with attributes
              such as name, year, and cost. It includes methods to get the age of the guitar,
              check if it is vintage, and provide a string representation of the guitar.
@@ -24,5 +22,8 @@ class Guitar:
     def __str__(self):
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
-# Check the current time here before starting.
-# Start time: 12:00 PM
+    def __lt__(self, other):
+        """Define less than for sorting by year."""
+        return self.year < other.year
+
+
