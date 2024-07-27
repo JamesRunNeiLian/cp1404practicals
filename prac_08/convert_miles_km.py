@@ -26,3 +26,8 @@ class MilesConverterApp(App):
         miles = self.convert_to_number(text) + change
         self.root.ids.input_miles.text = str(miles)
         # TextInput on_text event will trigger handle_calculate
+
+    def update_result(self, miles):
+        """Update the output label with the converted value."""
+        print("Updating result")
+        self.output_km = str(miles * CONVERSION_FACTOR)
