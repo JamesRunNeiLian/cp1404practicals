@@ -31,3 +31,12 @@ class MilesConverterApp(App):
         """Update the output label with the converted value."""
         print("Updating result")
         self.output_km = str(miles * CONVERSION_FACTOR)
+
+    @staticmethod
+    def convert_to_number(text):
+        """Convert text to float or return 0.0 if invalid."""
+        try:
+            return float(text)
+        except ValueError:
+            return 0.0
+
