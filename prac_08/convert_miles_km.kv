@@ -1,14 +1,19 @@
 BoxLayout:
     orientation: 'vertical'
+    padding: 10
+    spacing: 10
     BoxLayout:
         orientation: 'horizontal'
         TextInput:
             id: input_miles
             font_size: 48
+            multiline: False
             on_text: app.handle_calculate(self.text)
         BoxLayout:
             orientation: 'vertical'
             size_hint_x: 0.3
+            padding: 5
+            spacing: 5
             Button:
                 text: 'Up'
                 on_press: app.handle_increment(input_miles.text, 1)
@@ -20,3 +25,9 @@ BoxLayout:
         text: app.output_km
         font_size: 48
         color: (1, 1, 0, 1)
+    Label:
+        text: 'Enter a number and press the buttons'
+        font_size: 35
+        color: (1, 1, 1, 1)  # White text to ensure visibility on a dark background
+        size_hint_y: None
+        height: 30
