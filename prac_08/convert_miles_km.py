@@ -40,3 +40,5 @@ class MilesConverterApp(App):
         except ValueError:
             return 0.0
 
+
+MilesConverterApp().run()
