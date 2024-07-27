@@ -1,17 +1,27 @@
 BoxLayout:
     orientation: 'vertical'
-#    orientation: 'horizontal'
-    Button:
-        text: 'Clear'
-        on_press: app.handle_clear()
-    TextInput:
-        id: input_name
-        text: ''
-    Button:
-        text: 'Greet'
-        on_press: app.handle_greet()
+    padding: 10
+    spacing: 10
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_miles
+            font_size: 48
+            multiline: False
+            on_text: app.handle_calculate(self.text)
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.3
+            padding: 5
+            spacing: 5
+            Button:
+                text: 'Up'
+                on_press: app.handle_increment(input_miles.text, 1)
+            Button:
+                text: 'Down'
+                on_press: app.handle_increment(input_miles.text, -1)
     Label:
-        text: 'Enter your name'
-        color: (1, 1, 0, 1)
         id: output_label
-
+        text: app.output_km
+        font_size: 48
+        color: (1, 1, 0, 1)
