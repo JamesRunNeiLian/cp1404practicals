@@ -29,6 +29,4 @@ def celsius_to_fahrenheit(celsius):
     return fahrenheit
 
 
-
-if __name__ == '__main__':
-    app.run()
+app.run()
