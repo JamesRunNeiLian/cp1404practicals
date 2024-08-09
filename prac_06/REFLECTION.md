@@ -14,3 +14,5 @@ I need to stop procrastinating on assignments and start them early to reduce str
 
 ##What is one request you have or change you suggest for this subject and/or your IT degree overall?
 I suggest to lecture more in the class than making the student very dependent on the SLD video.
+https://github.com/CP1404/a1-JamesRunNeiLian/pull/1
+https://github.com/JamesRunNeiLian/cp1404practicals/pull/2
